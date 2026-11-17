@@ -3,30 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Nombre de tu Negocio] | [Eslogan Corto]</title>
-  <meta name="description" content="[Breve descripción de tu negocio para buscadores como Google]">
+  <title>ConDent Dental Clinic | Devolviendo sonrisas, recuperando la confianza</title>
+  <meta name="description" content="Clínica odontológica ConDent en Lagos de Moreno, Jalisco. Tratamientos y prótesis dentales accesibles con diagnóstico ético y calidez humana.">
   
-  <!-- Fuente moderna de Google Fonts -->
+  <!-- Tipografías Oficiales de la Marca: Montserrat y Open Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     /* =========================================
-       VARIABLES DE COLOR Y ESTILOS GENERALES
-       (Cambia estos colores según tu marca)
+       MATRIZ DE COLORIMETRÍA OFICIAL - CONDENT
     ========================================= */
     :root {
-      --primary: #0f766e;       /* Color principal (Verde azulado profesional) */
-      --primary-dark: #115e59;  /* Color principal al pasar el mouse */
-      --accent: #25d366;        /* Verde WhatsApp */
-      --bg-light: #f8fafc;      /* Fondo claro para secciones alternas */
-      --text-dark: #1e293b;     /* Texto principal oscuro */
-      --text-muted: #64748b;    /* Texto secundario gris */
-      --white: #ffffff;
-      --border: #e2e8f0;
-      --radius: 12px;
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --primary-cyan: #00BCD4;      /* Primario: Azul Cian / Turquesa Dental */
+      --primary-cyan-dark: #0097A7; /* Hover del botón principal */
+      --secondary-navy: #0A4ABF;    /* Secundario: Azul Marino Clínico */
+      --accent-sage: #78A083;       /* Acento: Verde Salvia / Bio Calma */
+      --bg-white: #FFFFFF;          /* Neutro: Blanco Puro */
+      --bg-light: #F4F7F9;          /* Neutro: Gris Claro Clínico */
+      --text-dark: #1E293B;         /* Texto principal oscuro */
+      --text-muted: #526071;        /* Texto secundario */
+      --whatsapp: #25D366;          /* Verde WhatsApp */
+      --border: #E2E8F0;
+      --radius: 14px;
+      --shadow: 0 10px 25px -5px rgba(10, 74, 191, 0.08), 0 4px 10px -2px rgba(0, 188, 212, 0.06);
     }
 
     * {
@@ -40,10 +41,14 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       color: var(--text-dark);
-      line-height: 1.6;
-      background-color: var(--white);
+      line-height: 1.65;
+      background-color: var(--bg-white);
+    }
+
+    h1, h2, h3, h4, .brand-font {
+      font-family: 'Montserrat', sans-serif;
     }
 
     a {
@@ -53,25 +58,41 @@
 
     .container {
       width: 90%;
-      max-width: 1140px;
+      max-width: 1160px;
       margin: 0 auto;
     }
 
     section {
-      padding: 5rem 0;
+      padding: 5.5rem 0;
     }
 
     .section-header {
       text-align: center;
-      max-width: 650px;
+      max-width: 720px;
       margin: 0 auto 3.5rem auto;
     }
 
-    .section-header h2 {
-      font-size: 2.2rem;
+    .section-tag {
+      display: inline-block;
+      background-color: rgba(120, 160, 131, 0.15);
+      color: #4A6B53;
+      border: 1px solid rgba(120, 160, 131, 0.35);
+      padding: 0.3rem 0.9rem;
+      border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
       font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: var(--text-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--secondary-navy);
+      margin-bottom: 0.8rem;
+      line-height: 1.25;
     }
 
     .section-header p {
@@ -85,8 +106,8 @@
     header {
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
       z-index: 1000;
     }
@@ -95,104 +116,146 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 72px;
+      height: 78px;
     }
 
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary);
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-text-group {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.55rem;
       letter-spacing: -0.5px;
+      color: var(--secondary-navy);
+    }
+
+    .logo-title .con {
+      font-weight: 800;
+    }
+
+    .logo-title .dent {
+      font-weight: 500;
+    }
+
+    .logo-subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 2.2px;
+      color: var(--secondary-navy);
+      margin-top: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1.8rem;
       list-style: none;
       align-items: center;
     }
 
     .nav-links a {
-      font-weight: 500;
-      font-size: 0.95rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
       color: var(--text-dark);
       transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: var(--primary);
+      color: var(--primary-cyan);
     }
 
     .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
       transition: all 0.25s ease;
       cursor: pointer;
       border: none;
-      text-align: center;
     }
 
     .btn-primary {
-      background-color: var(--primary);
-      color: var(--white);
+      background-color: var(--primary-cyan);
+      color: var(--bg-white);
+      box-shadow: 0 4px 14px rgba(0, 188, 212, 0.3);
     }
 
     .btn-primary:hover {
-      background-color: var(--primary-dark);
+      background-color: var(--primary-cyan-dark);
       transform: translateY(-2px);
     }
 
-    .btn-outline {
-      border: 2px solid var(--primary);
-      color: var(--primary);
-      background: transparent;
+    .btn-secondary {
+      background-color: var(--bg-white);
+      color: var(--secondary-navy);
+      border: 2px solid var(--secondary-navy);
     }
 
-    .btn-outline:hover {
-      background-color: var(--primary);
-      color: var(--white);
+    .btn-secondary:hover {
+      background-color: var(--secondary-navy);
+      color: var(--bg-white);
     }
 
     /* =========================================
        SECCIÓN HERO (PORTADA)
     ========================================= */
     .hero {
-      background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
-      padding: 6rem 0;
+      background: linear-gradient(135deg, #F4F7F9 0%, #FFFFFF 55%, rgba(0, 188, 212, 0.06) 100%);
+      padding: 5.5rem 0;
       border-bottom: 1px solid var(--border);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3rem;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
       align-items: center;
     }
 
-    .hero-badge {
-      display: inline-block;
-      background: #ccfbf1;
-      color: var(--primary-dark);
-      padding: 0.35rem 0.9rem;
+    .hero-slogan-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: rgba(120, 160, 131, 0.16);
+      color: #3E5C46;
+      padding: 0.45rem 1rem;
       border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
       font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1.3rem;
     }
 
     .hero h1 {
-      font-size: 3rem;
-      line-height: 1.15;
-      font-weight: 700;
-      margin-bottom: 1.25rem;
-      letter-spacing: -1px;
+      font-size: 2.85rem;
+      line-height: 1.18;
+      font-weight: 800;
+      color: var(--secondary-navy);
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.8px;
     }
 
-    .hero p {
-      font-size: 1.15rem;
+    .hero h1 span {
+      color: var(--primary-cyan);
+    }
+
+    .hero-lead {
+      font-size: 1.08rem;
       color: var(--text-muted);
       margin-bottom: 2rem;
     }
@@ -201,194 +264,355 @@
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
+      margin-bottom: 2rem;
     }
 
-    .hero-image-box {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 1rem;
+    .hero-trust {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .hero-trust span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-trust i {
+      color: var(--accent-sage);
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    .hero-brand-card {
+      background: var(--bg-white);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-image-box img {
+    .hero-brand-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary-cyan), var(--secondary-navy), var(--accent-sage));
+    }
+
+    .hero-brand-card img {
+      max-width: 260px;
       width: 100%;
-      height: 360px;
-      object-fit: cover;
-      border-radius: 8px;
+      height: auto;
+      margin: 0 auto 1rem auto;
       display: block;
     }
 
+    .slogan-quote {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--secondary-navy);
+      margin-top: 1rem;
+    }
+
+    .location-pill {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: var(--bg-light);
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+    }
+
     /* =========================================
-       SECCIÓN DE SERVICIOS / PRODUCTOS
+       SECCIÓN PROPÓSITO (PTM) Y VALORES
     ========================================= */
-    .services {
-      background-color: var(--white);
+    .purpose-section {
+      background-color: var(--bg-light);
+      border-bottom: 1px solid var(--border);
     }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
+    .purpose-banner {
+      background: linear-gradient(135deg, var(--secondary-navy) 0%, #083894 100%);
+      color: var(--bg-white);
+      border-radius: 20px;
+      padding: 3rem;
+      margin-bottom: 3rem;
       box-shadow: var(--shadow);
-      border-color: var(--primary);
+      position: relative;
+      overflow: hidden;
     }
 
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      background: #f0fdfa;
-      color: var(--primary);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1.25rem;
+    .purpose-banner::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(0, 188, 212, 0.15);
     }
 
-    .service-card h3 {
-      font-size: 1.25rem;
+    .purpose-label {
+      display: inline-block;
+      background: rgba(0, 188, 212, 0.22);
+      color: #7CE8F7;
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .purpose-banner h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 1rem;
+      max-width: 880px;
+    }
+
+    .purpose-banner p {
+      font-size: 1.05rem;
+      color: #DCE7FA;
+      max-width: 850px;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .pillar-card {
+      background: var(--bg-white);
+      padding: 2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--accent-sage);
+    }
+
+    .pillar-card h3 {
+      color: var(--secondary-navy);
+      font-size: 1.18rem;
       margin-bottom: 0.6rem;
     }
 
-    .service-card p {
+    .pillar-card p {
       color: var(--text-muted);
       font-size: 0.95rem;
     }
 
     /* =========================================
-       SECCIÓN NOSOTROS / POR QUÉ ELEGIRNOS
+       SECCIÓN DE ESPECIALIDADES (8 SERVICIOS)
     ========================================= */
-    .about {
-      background-color: var(--bg-light);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+    .services-section {
+      background-color: var(--bg-white);
     }
 
-    .about-grid {
+    .services-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3.5rem;
-      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.6rem;
     }
 
-    .about-list {
-      list-style: none;
-      margin-top: 1.5rem;
+    .service-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .about-list li {
-      margin-bottom: 0.9rem;
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--primary-cyan);
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: rgba(0, 188, 212, 0.12);
+      color: var(--primary-cyan);
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      font-weight: 500;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.1rem;
     }
 
-    .check {
-      color: var(--primary);
-      font-weight: bold;
-      font-size: 1.2rem;
+    .service-card h3 {
+      font-size: 1.15rem;
+      color: var(--secondary-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .service-link {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary-cyan);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .service-link:hover {
+      color: var(--secondary-navy);
     }
 
     /* =========================================
-       SECCIÓN DE CONTACTO Y UBICACIÓN
+       SECCIÓN CONTACTO Y UBICACIÓN
     ========================================= */
+    .contact-section {
+      background-color: var(--bg-light);
+      border-top: 1px solid var(--border);
+    }
+
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 2.5rem;
+      align-items: stretch;
     }
 
-    .contact-info {
-      background: var(--bg-light);
-      padding: 2.2rem;
+    .contact-card {
+      background: var(--bg-white);
+      padding: 2.4rem;
       border-radius: var(--radius);
       border: 1px solid var(--border);
+      box-shadow: var(--shadow);
     }
 
-    .info-item {
-      margin-bottom: 1.5rem;
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+      align-items: flex-start;
     }
 
-    .info-item strong {
-      display: block;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--primary);
-      margin-bottom: 0.25rem;
+    .contact-item-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(10, 74, 191, 0.08);
+      color: var(--secondary-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
     }
 
-    .contact-form {
+    .contact-item h4 {
+      font-size: 0.95rem;
+      color: var(--secondary-navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-item p, .contact-item a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .contact-item a:hover {
+      color: var(--primary-cyan);
+      text-decoration: underline;
+    }
+
+    .map-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      min-height: 360px;
+      box-shadow: var(--shadow);
+      background: var(--bg-white);
       display: flex;
       flex-direction: column;
-      gap: 1.1rem;
     }
 
-    .form-group label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
+    .map-container iframe {
       width: 100%;
-      padding: 0.8rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      transition: border-color 0.2s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary);
+      height: 100%;
+      min-height: 340px;
+      border: 0;
+      flex-grow: 1;
     }
 
     /* =========================================
        PIE DE PÁGINA Y BOTÓN FLOTANTE WHATSAPP
     ========================================= */
     footer {
-      background: var(--text-dark);
-      color: #cbd5e1;
+      background-color: var(--secondary-navy);
+      color: var(--bg-white);
+      padding: 3rem 0 2rem 0;
       text-align: center;
-      padding: 2.5rem 0;
-      font-size: 0.9rem;
+    }
+
+    .footer-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-slogan {
+      color: #93C5FD;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 1.2rem;
+      font-size: 0.85rem;
+      color: #CBD5E1;
     }
 
     .whatsapp-float {
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background-color: var(--accent);
-      color: var(--white);
-      padding: 0.85rem 1.3rem;
+      background-color: var(--whatsapp);
+      color: var(--bg-white);
+      padding: 0.9rem 1.4rem;
       border-radius: 50px;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
       z-index: 999;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      transition: transform 0.2s;
+      gap: 0.55rem;
+      transition: transform 0.2s ease;
     }
 
     .whatsapp-float:hover {
@@ -396,15 +620,14 @@
     }
 
     /* =========================================
-       DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+       DISEÑO RESPONSIVO
     ========================================= */
-    @media (max-width: 768px) {
+    @media (max-width: 860px) {
       .nav-links {
-        display: none; /* Oculta menú en móvil para mantenerlo limpio */
+        display: none;
       }
 
       .hero-grid,
-      .about-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
@@ -415,15 +638,20 @@
       }
 
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.15rem;
       }
 
-      .hero-buttons {
+      .hero-buttons,
+      .hero-trust {
         justify-content: center;
       }
 
-      .hero-image-box img {
-        height: 250px;
+      .purpose-banner {
+        padding: 2rem 1.5rem;
+      }
+
+      .purpose-banner h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -433,129 +661,254 @@
   <!-- BARRA DE NAVEGACIÓN -->
   <header>
     <div class="container nav-container">
-      <a href="#" class="logo">[Tu Negocio]</a>
+      <a href="#inicio" class="logo-wrapper">
+        <!-- Isotipo SVG vectorial con los colores oficiales (#00BCD4) -->
+        <svg width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M74 28C67 20 58 16 48 16C28 16 14 31 14 50C14 69 28 84 48 84C59 84 68 79 75 71" stroke="#00BCD4" stroke-width="6.5" stroke-linecap="round"/>
+          <path d="M36 37C36 31 41 27 46 29C49 30 51 30 54 29C59 27 64 31 64 37C64 46 61 58 57 62C54 65 52 56 50 56C48 56 46 65 43 62C39 58 36 46 36 37Z" stroke="#00BCD4" stroke-width="5.5" stroke-linejoin="round"/>
+          <path d="M32 69C38 74 44 76 51 76C58 76 64 73 69 68" stroke="#00BCD4" stroke-width="5.5" stroke-linecap="round"/>
+        </svg>
+        <div class="logo-text-group">
+          <span class="logo-title"><span class="con">Con</span><span class="dent">Dent</span></span>
+          <span class="logo-subtitle">DENTAL CLINIC</span>
+        </div>
+      </a>
+
       <nav>
         <ul class="nav-links">
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#contacto" class="btn btn-primary" style="color: white; padding: 0.55rem 1.2rem;">Contactar</a></li>
+          <li><a href="#proposito">Nuestra Misión</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#contacto">Ubicación</a></li>
+          <li>
+            <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank" rel="noopener" class="btn btn-primary" style="color: #FFFFFF; padding: 0.55rem 1.2rem;">
+              Agendar Cita
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- SECCIÓN PRINCIPAL (HERO) -->
+  <!-- SECCIÓN HERO (PORTADA) -->
   <section id="inicio" class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="hero-badge">[Tu Ciudad / Zona de Servicio]</span>
-        <h1>[Título principal atractivo sobre lo que ofreces]</h1>
-        <p>[Explica en 2 líneas cómo ayudas a tus clientes, tu propuesta de valor y qué te hace diferente.]</p>
+        <div class="hero-slogan-badge">
+          <span>✦ Devolviendo sonrisas, recuperando la confianza</span>
+        </div>
+        <h1>Tu sonrisa en manos expertas, <span>cerca de ti</span></h1>
+        <p class="hero-lead">
+          En <strong>ConDent</strong>, transformamos la visita al dentista en una experiencia segura y transparente. Diseñamos tratamientos odontológicos integrales y prótesis dentales accesibles adaptadas a las necesidades de tu familia, combinando tecnología de vanguardia con la calidez humana que mereces.
+        </p>
         <div class="hero-buttons">
-          <a href="#contacto" class="btn btn-primary">Agendar / Cotizar ahora</a>
-          <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+          <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20una%20consulta" target="_blank" rel="noopener" class="btn btn-primary">
+            Agendar por WhatsApp
+          </a>
+          <a href="#especialidades" class="btn btn-secondary">
+            Conocer Especialidades
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span><i>✓</i> Diagnóstico ético y honesto</span>
+          <span><i>✓</i> Tratamientos y prótesis accesibles</span>
+          <span><i>✓</i> Laboratorio y Rayos X en clínica</span>
         </div>
       </div>
-      <div class="hero-image-box">
-        <!-- Reemplaza esta URL por una foto de tu local, equipo o producto -->
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Imagen representativa del negocio">
+
+      <div class="hero-brand-card">
+        <!-- NOTA: Si subes tu archivo de logo a GitHub con el nombre 'logo-condent.jpg', descomenta la siguiente línea y borra el SVG de abajo -->
+        <!-- <img src="logo-condent.jpg" alt="Logotipo Oficial ConDent Dental Clinic"> -->
+        
+        <svg width="160" height="160" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto 0.8rem auto; display: block;">
+          <path d="M74 28C67 20 58 16 48 16C28 16 14 31 14 50C14 69 28 84 48 84C59 84 68 79 75 71" stroke="#00BCD4" stroke-width="5.5" stroke-linecap="round"/>
+          <path d="M23 48C23 62 34 73 48 73C56 73 63 70 68 65" stroke="#00BCD4" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M36 37C36 31 41 27 46 29C49 30 51 30 54 29C59 27 64 31 64 37C64 46 61 58 57 62C54 65 52 56 50 56C48 56 46 65 43 62C39 58 36 46 36 37Z" stroke="#00BCD4" stroke-width="5" stroke-linejoin="round"/>
+        </svg>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 2.3rem; color: #0A4ABF; line-height: 1.1;">
+          <strong style="font-weight: 800;">Con</strong><span style="font-weight: 500;">Dent</span>
+        </div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 3px; color: #0A4ABF; margin-top: 4px;">
+          DENTAL CLINIC
+        </div>
+        <p class="slogan-quote">“Devolviendo sonrisas, recuperando la confianza”</p>
+        <span class="location-pill">📍 Col. El Lindero, Lagos de Moreno, Jalisco</span>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN DE SERVICIOS -->
-  <section id="servicios" class="services">
+  <!-- SECCIÓN PROPÓSITO TRANSFORMADOR MASIVO (PTM) -->
+  <section id="proposito" class="purpose-section">
+    <div class="container">
+      <div class="purpose-banner">
+        <span class="purpose-label">Nuestro Propósito Transformador</span>
+        <h2>“Erradicar las barreras económicas para que nadie en nuestra región tenga que ocultar su sonrisa jamás.”</h2>
+        <p>
+          Trabajamos cada día para devolver la confianza a los pacientes de nuestra comunidad, del municipio de Lagos de Moreno y de los pueblos aledaños, ofreciendo tratamientos odontológicos y prótesis dentales de alta calidad a un costo justo y accesible.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <h3>Empatía y Protección</h3>
+          <p>Creamos un entorno cálido, tranquilo y libre de ansiedad donde cada paciente recibe atención humana, respetuosa y personalizada.</p>
+        </div>
+        <div class="pillar-card">
+          <h3>Diagnóstico Ético</h3>
+          <p>Sin promesas engañosas ni tratamientos innecesarios. Te explicamos con total transparencia cada opción para cuidar tu salud bucal.</p>
+        </div>
+        <div class="pillar-card">
+          <h3>Acceso Regional</h3>
+          <p>Acercamos la odontología especializada y la rehabilitación protésica a familias de zonas residenciales y comunidades rurales por igual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE ESPECIALIDADES -->
+  <section id="especialidades" class="services-section">
     <div class="container">
       <div class="section-header">
-        <h2>Nuestros Servicios</h2>
-        <p>Soluciones diseñadas a la medida con atención profesional y resultados garantizados.</p>
+        <span class="section-tag">Atención Integral</span>
+        <h2>Nuestras Especialidades y Servicios</h2>
+        <p>Contamos con todas las áreas odontológicas, diagnóstico radiográfico y laboratorio dental en un mismo lugar para brindarte soluciones rápidas y precisas.</p>
       </div>
 
       <div class="services-grid">
+        <!-- 1. Odontología General -->
         <div class="service-card">
-          <div class="service-icon">★</div>
-          <h3>[Servicio Principal 1]</h3>
-          <p>[Descripción breve de los beneficios de este servicio y para quién está pensado.]</p>
+          <div>
+            <div class="service-icon">🦷</div>
+            <h3>Odontología General</h3>
+            <p>Diagnóstico integral, limpiezas dentales con ultrasonido, resinas estéticas y prevención para mantener tu boca sana.</p>
+          </div>
+          <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20me%20interesa%20una%20consulta%20de%20Odontolog%C3%ADa%20General" target="_blank" rel="noopener" class="service-link">Agendar valoración →</a>
         </div>
 
+        <!-- 2. Endodoncia -->
         <div class="service-card">
-          <div class="service-icon">⚡</div>
-          <h3>[Servicio Principal 2]</h3>
-          <p>[Descripción breve de los beneficios de este servicio y para quién está pensado.]</p>
+          <div>
+            <div class="service-icon">🛡️</div>
+            <h3>Endodoncia</h3>
+            <p>Tratamiento de conductos sin dolor para eliminar infecciones y salvar tus piezas dentales naturales evitando extracciones.</p>
+          </div>
+          <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20necesito%20informaci%C3%B3n%20sobre%20Endodoncia" target="_blank" rel="noopener" class="service-link">Agendar valoración →</a>
         </div>
 
+        <!-- 3. Ortodoncia -->
         <div class="service-card">
-          <div class="service-icon">🛡️</div>
-          <h3>[Servicio Principal 3]</h3>
-          <p>[Descripción breve de los beneficios de este servicio y para quién está pensado.]</p>
+          <div>
+            <div class="service-icon">✨</div>
+            <h3>Ortodoncia</h3>
+            <p>Alineación dental y corrección de mordida mediante brackets convencionales, estéticos y alineadores para una sonrisa armónica.</p>
+          </div>
+          <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20me%20interesa%20una%20valoraci%C3%B3n%20de%20Ortodoncia" target="_blank" rel="noopener" class="service-link">Agendar valoración →</a>
+        </div>
+
+        <!-- 4. Odontopediatría -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon">🧸</div>
+            <h3>Odontopediatría</h3>
+            <p>Cuidado dental especializado para bebés, niños y adolescentes en un ambiente amigable que fomenta hábitos saludables sin miedo.</p>
+          </div>
+          <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20busco%20cita%20de%20Odontopediatr%C3%ADa%20para%20mi%20hijo/a" target="_blank" rel="noopener" class="service-link">Agendar valoración →</a>
+        </div>
+
+        <!-- 5. Rehabilitación Oral -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon">👑</div>
+            <h3>Rehabilitación</h3>
+            <p>Devolvemos la función masticatoria y estética con coronas libres de metal, puentes fijos y prótesis totales o parciales accesibles.</p>
+          </div>
+          <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20me%20interesa%20informaci%C3%B3n%20sobre%20Rehabilitaci%C3%B3n%20y%20Pr%C3%B3tesis" target="_blank" rel="noopener" class="service-link">Agendar valoración →</a>
+        </div>
+
+        <!-- 6. Implantología -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon">🔩</div>
+            <h3>Implantología</h3>
+            <p>Reemplazo fijo, seguro y duradero de dientes perdidos mediante implantes de titanio biocompatibles de alta precisión.</p>
+          </div>
+          <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20quisiera%20cotizar%20un%20tratamiento%20de%20Implantolog%C3%ADa" target="_blank" rel="noopener" class="service-link">Agendar valoración →</a>
+        </div>
+
+        <!-- 7. Laboratorio Dental -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon">🔬</div>
+            <h3>Laboratorio Dental</h3>
+            <p>Fabricación propia y personalizada de prótesis dentales, guardas y restauraciones con ajuste exacto y tiempos de entrega ágiles.</p>
+          </div>
+          <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Laboratorio%20Dental%20y%20pr%C3%B3tesis" target="_blank" rel="noopener" class="service-link">Consultar servicio →</a>
+        </div>
+
+        <!-- 8. Servicio de Rayos X -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon">🩻</div>
+            <h3>Servicio de Rayos X</h3>
+            <p>Diagnóstico radiográfico digital inmediato en clínica con mínima radiación para planificar tus tratamientos con total certeza.</p>
+          </div>
+          <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20necesito%20informaci%C3%B3n%20sobre%20el%20Servicio%20de%20Rayos%20X" target="_blank" rel="noopener" class="service-link">Consultar servicio →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN SOBRE NOSOTROS -->
-  <section id="nosotros" class="about">
-    <div class="container about-grid">
-      <div>
-        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Comprometidos con la calidad y tu confianza</h2>
-        <p style="color: var(--text-muted);">[Cuenta brevemente la historia de tu negocio, tu experiencia y el enfoque humano o técnico que aplican en cada trabajo.]</p>
-        <ul class="about-list">
-          <li><span class="check">✓</span> Atención personalizada y transparente</li>
-          <li><span class="check">✓</span> Precios justos y presupuestos claros</li>
-          <li><span class="check">✓</span> Equipamiento y materiales de primera calidad</li>
-        </ul>
-      </div>
-      <div class="hero-image-box">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Equipo de trabajo">
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN DE CONTACTO -->
-  <section id="contacto">
+  <!-- SECCIÓN CONTACTO Y UBICACIÓN -->
+  <section id="contacto" class="contact-section">
     <div class="container">
       <div class="section-header">
-        <h2>Contáctanos</h2>
-        <p>Envíanos un mensaje o visítanos directamente. Te responderemos a la brevedad.</p>
+        <span class="section-tag">Visítanos</span>
+        <h2>Estamos listos para atenderte</h2>
+        <p>Agenda tu cita fácilmente por WhatsApp o acude directamente a nuestras instalaciones en Lagos de Moreno.</p>
       </div>
 
       <div class="contact-grid">
-        <div class="contact-info">
-          <div class="info-item">
-            <strong>Dirección</strong>
-            <p>[Calle, Número, Colonia, Ciudad y Estado]</p>
+        <div class="contact-card">
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <h4>Dirección de la Clínica</h4>
+              <p>Calle Jalisco #147, Colonia El Lindero<br>Lagos de Moreno, Jalisco, México</p>
+            </div>
           </div>
-          <div class="info-item">
-            <strong>Horario de Atención</strong>
-            <p>Lunes a Viernes: 9:00 AM – 7:00 PM<br>Sábados: 9:00 AM – 2:00 PM</p>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">💬</div>
+            <div>
+              <h4>WhatsApp y Teléfono</h4>
+              <p><a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank" rel="noopener"><strong>474 134 6911</strong> (Clic para enviar WhatsApp)</a></p>
+            </div>
           </div>
-          <div class="info-item">
-            <strong>Teléfono / WhatsApp</strong>
-            <p>[+52 000 000 0000]</p>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">🕒</div>
+            <div>
+              <h4>Horarios de Atención</h4>
+              <p>Lunes a Viernes: 9:00 AM – 2:00 PM y 4:00 PM – 8:00 PM<br>Sábados: 9:00 AM – 2:00 PM</p>
+            </div>
           </div>
-          <div class="info-item" style="margin-bottom: 0;">
-            <strong>Correo Electrónico</strong>
-            <p>[contacto@tunegocio.com]</p>
+
+          <div style="margin-top: 2rem;">
+            <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20quiero%20agendar%20mi%20cita%20de%20valoraci%C3%B3n" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; background-color: #25D366; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);">
+              📲 Enviar mensaje directo por WhatsApp
+            </a>
           </div>
         </div>
 
-        <!-- Para recibir correos gratis en GitHub Pages, regístrate en formspree.io y pega tu URL en action="" -->
-        <form class="contact-form" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
-          <div class="form-group">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
-          </div>
-          <div class="form-group">
-            <label for="telefono">Teléfono o WhatsApp</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 474 123 4567" required>
-          </div>
-          <div class="form-group">
-            <label for="mensaje">¿En qué podemos ayudarte?</label>
-            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta o el servicio que te interesa..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-        </form>
+        <!-- Mapa interactivo centrado en Calle Jalisco, Col. El Lindero, Lagos de Moreno -->
+        <div class="map-container">
+          <iframe 
+            src="https://maps.google.com/maps?q=Calle%20Jalisco%20147,%20El%20Lindero,%20Lagos%20de%20Moreno,%20Jalisco&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            title="Ubicación de ConDent Dental Clinic en Lagos de Moreno"
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -563,13 +916,20 @@
   <!-- PIE DE PÁGINA -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 [Nombre de tu Negocio]. Todos los derechos reservados.</p>
+      <div class="footer-brand">
+        <strong style="font-weight: 800;">Con</strong><span style="font-weight: 500;">Dent</span> <span style="font-size: 0.9rem; letter-spacing: 2px; color: #00BCD4;">DENTAL CLINIC</span>
+      </div>
+      <p class="footer-slogan">Devolviendo sonrisas, recuperando la confianza</p>
+      <div class="footer-bottom">
+        <p>Calle Jalisco #147, Col. El Lindero, Lagos de Moreno, Jalisco • Tel/WhatsApp: 474 134 6911</p>
+        <p style="margin-top: 0.4rem;">&copy; 2026 ConDent Dental Clinic. Todos los derechos reservados.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- BOTÓN FLOTANTE DE WHATSAPP (Cambia el número 5210000000000 por el tuyo con código de país) -->
-  <a href="https://wa.me/5210000000000?text=Hola,%20me%20gustaría%20pedir%20información" class="whatsapp-float" target="_blank" rel="noopener">
-    <span>💬 WhatsApp</span>
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/5214741346911?text=Hola%20ConDent,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <span>💬 WhatsApp 474 134 6911</span>
   </a>
 
 </body>
