@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Nombre de tu Negocio] | [Eslogan Corto]</title>
+  <meta name="description" content="[Breve descripción de tu negocio para buscadores como Google]">
+  
+  <!-- Fuente moderna de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================
+       VARIABLES DE COLOR Y ESTILOS GENERALES
+       (Cambia estos colores según tu marca)
+    ========================================= */
+    :root {
+      --primary: #0f766e;       /* Color principal (Verde azulado profesional) */
+      --primary-dark: #115e59;  /* Color principal al pasar el mouse */
+      --accent: #25d366;        /* Verde WhatsApp */
+      --bg-light: #f8fafc;      /* Fondo claro para secciones alternas */
+      --text-dark: #1e293b;     /* Texto principal oscuro */
+      --text-muted: #64748b;    /* Texto secundario gris */
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: var(--white);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-dark);
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* =========================================
+       BARRA DE NAVEGACIÓN (HEADER)
+    ========================================= */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    /* =========================================
+       SECCIÓN HERO (PORTADA)
+    ========================================= */
+    .hero {
+      background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #ccfbf1;
+      color: var(--primary-dark);
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-image-box {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-image-box img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* =========================================
+       SECCIÓN DE SERVICIOS / PRODUCTOS
+    ========================================= */
+    .services {
+      background-color: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--primary);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: #f0fdfa;
+      color: var(--primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* =========================================
+       SECCIÓN NOSOTROS / POR QUÉ ELEGIRNOS
+    ========================================= */
+    .about {
+      background-color: var(--bg-light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .about-list li {
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 500;
+    }
+
+    .check {
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* =========================================
+       SECCIÓN DE CONTACTO Y UBICACIÓN
+    ========================================= */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+    }
+
+    .contact-info {
+      background: var(--bg-light);
+      padding: 2.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .info-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .info-item strong {
+      display: block;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    /* =========================================
+       PIE DE PÁGINA Y BOTÓN FLOTANTE WHATSAPP
+    ========================================= */
+    footer {
+      background: var(--text-dark);
+      color: #cbd5e1;
+      text-align: center;
+      padding: 2.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: var(--accent);
+      color: var(--white);
+      padding: 0.85rem 1.3rem;
+      border-radius: 50px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    /* =========================================
+       DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+    ========================================= */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Oculta menú en móvil para mantenerlo limpio */
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 3.5rem 0;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image-box img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">[Tu Negocio]</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto" class="btn btn-primary" style="color: white; padding: 0.55rem 1.2rem;">Contactar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECCIÓN PRINCIPAL (HERO) -->
+  <section id="inicio" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-badge">[Tu Ciudad / Zona de Servicio]</span>
+        <h1>[Título principal atractivo sobre lo que ofreces]</h1>
+        <p>[Explica en 2 líneas cómo ayudas a tus clientes, tu propuesta de valor y qué te hace diferente.]</p>
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn btn-primary">Agendar / Cotizar ahora</a>
+          <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero-image-box">
+        <!-- Reemplaza esta URL por una foto de tu local, equipo o producto -->
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Imagen representativa del negocio">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE SERVICIOS -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nuestros Servicios</h2>
+        <p>Soluciones diseñadas a la medida con atención profesional y resultados garantizados.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">★</div>
+          <h3>[Servicio Principal 1]</h3>
+          <p>[Descripción breve de los beneficios de este servicio y para quién está pensado.]</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>[Servicio Principal 2]</h3>
+          <p>[Descripción breve de los beneficios de este servicio y para quién está pensado.]</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>[Servicio Principal 3]</h3>
+          <p>[Descripción breve de los beneficios de este servicio y para quién está pensado.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN SOBRE NOSOTROS -->
+  <section id="nosotros" class="about">
+    <div class="container about-grid">
+      <div>
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Comprometidos con la calidad y tu confianza</h2>
+        <p style="color: var(--text-muted);">[Cuenta brevemente la historia de tu negocio, tu experiencia y el enfoque humano o técnico que aplican en cada trabajo.]</p>
+        <ul class="about-list">
+          <li><span class="check">✓</span> Atención personalizada y transparente</li>
+          <li><span class="check">✓</span> Precios justos y presupuestos claros</li>
+          <li><span class="check">✓</span> Equipamiento y materiales de primera calidad</li>
+        </ul>
+      </div>
+      <div class="hero-image-box">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Equipo de trabajo">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contáctanos</h2>
+        <p>Envíanos un mensaje o visítanos directamente. Te responderemos a la brevedad.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <strong>Dirección</strong>
+            <p>[Calle, Número, Colonia, Ciudad y Estado]</p>
+          </div>
+          <div class="info-item">
+            <strong>Horario de Atención</strong>
+            <p>Lunes a Viernes: 9:00 AM – 7:00 PM<br>Sábados: 9:00 AM – 2:00 PM</p>
+          </div>
+          <div class="info-item">
+            <strong>Teléfono / WhatsApp</strong>
+            <p>[+52 000 000 0000]</p>
+          </div>
+          <div class="info-item" style="margin-bottom: 0;">
+            <strong>Correo Electrónico</strong>
+            <p>[contacto@tunegocio.com]</p>
+          </div>
+        </div>
+
+        <!-- Para recibir correos gratis en GitHub Pages, regístrate en formspree.io y pega tu URL en action="" -->
+        <form class="contact-form" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono o WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 474 123 4567" required>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">¿En qué podemos ayudarte?</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta o el servicio que te interesa..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 [Nombre de tu Negocio]. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP (Cambia el número 5210000000000 por el tuyo con código de país) -->
+  <a href="https://wa.me/5210000000000?text=Hola,%20me%20gustaría%20pedir%20información" class="whatsapp-float" target="_blank" rel="noopener">
+    <span>💬 WhatsApp</span>
+  </a>
+
+</body>
+</html>
